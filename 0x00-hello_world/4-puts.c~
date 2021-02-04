@@ -1,10 +1,8 @@
 #include <stdio.h>
 /**
+ *main - Is where the program start its execution.
  *
- *
- * main - Is where the program start its execution.
- *
- * return -  always 0
+ * Return:  always 0
  */
 int main(void)
 {
