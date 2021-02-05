@@ -8,25 +8,25 @@
 
 int main(void)
 {
-	int i = '0';
+	int d = '0';
 
-	while (i <= '9')
+	while (d <= '9')
 	{
-		int c = '0';
+		int r = '0';
 
-		while (c <= '9')
+		while (r <= '9')
 		{
-			putchar(i);
-			putchar(c);
+			putchar(d);
+			putchar(r);
 
-			if (i != '9' || c != '9')
+			if (d != '9' || r != '9')
 			{
 				putchar(',');
 				putchar(' ');
 			}
-			c++;
+			r++;
 		}
-		i++;
+		d++;
 	}
 	putchar('\n');
 	return (0);
