@@ -7,10 +7,13 @@
 void print_alphabet(void);
 {
 
-int d;
-for (d = 'a'; d <= 'z'; d++)
+char i = 'a';
+
+while (i <= 'z')
 {
-_putchar (d);
+
+_putchar (i);
+i++;
 }
 
 _putchar('\n');
