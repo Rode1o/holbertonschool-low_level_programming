@@ -1,12 +1,20 @@
-#include <stdio.h>
+#include "holberton.h"
+
 /**
- * main: This program print Holberton follow by a new line
- *
- * Return: Always 0
- */
+* main - writes Holberton follow by a new line
+*
+* Return: 0.
+*/
 
 int main(void)
 {
-char array [] = "Holberton\n";
+
+_putchar = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
+
+
+
+
+
 return (0);
+
 }
