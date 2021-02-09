@@ -23,7 +23,7 @@ _putchar((c / 10) + '0');
 _putchar((c % 10) + '0');
 }
 else
-_putchar(c + 'o');
+_putchar(c + '0');
 if (b < 9)
 {
 _putchar(',');
