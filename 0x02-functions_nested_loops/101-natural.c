@@ -13,7 +13,6 @@ int main(void)
 		if (n % 3 == 0 || n % 5 == 0)
 			s = s + n;
 	}
-	printf(" %d ", s);
-	printf('\n');
+	printf("%d\n", s);
 	return (0);
 }
