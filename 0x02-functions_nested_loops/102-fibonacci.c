@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - This program prints Holberton, followed by a new line.
+ * main - This program prints the first 50 fibonnaci numbers.
  *
  * Return: 0.
  */
