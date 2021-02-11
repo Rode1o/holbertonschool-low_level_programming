@@ -7,13 +7,13 @@
 
 int main(void)
 {
-int a = 1, b = 2, c, i;
-for (i = 1; i <= 50; i++)
-{
-printf("%d\n", a);
-c = a + b;
-a = b;
-b = c;
-}
-return (0);
+	int a = 1, b = 2, c, i;
+	for (i = 1; i <= 50; i++)
+	{
+		printf("%u\n", a);
+		c = a + b;
+		a = b;
+		b = c;
+	}
+	return (0);
 }
