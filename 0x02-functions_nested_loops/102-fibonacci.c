@@ -5,12 +5,17 @@
  * Return: 0.
  */
 
-int main(void)
+unsigned long int main(void)
 {
 	int a = 1, b = 2, c, i;
+
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%u\n", a);
+		printf("%lu", a);
+		if (i < 50)
+			printf(", ");
+		else
+			printf("\n");
 		c = a + b;
 		a = b;
 		b = c;
