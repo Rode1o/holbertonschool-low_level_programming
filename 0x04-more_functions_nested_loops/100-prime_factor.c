@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	long num;
+	long long num;
 	int maxPrime, oddPrime;
 
 	num = 612852475143;
@@ -29,7 +29,8 @@ int main(void)
 			maxPrime = oddPrime;
 			num /= oddPrime;
 		}
+		oddPrime += 2;
 	}
-	printf("%d\n", maxPrime);
+	printf("%lld\n", maxPrime);
 	return (0);
 }
