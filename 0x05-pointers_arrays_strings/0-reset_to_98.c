@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* reset_98 - main function
+*reset_to_98 - main function
 *@n: pointer with the addres value.
 *Description: This function takes a pointer to an int as parameter
 *and updates the value it points to to 98
