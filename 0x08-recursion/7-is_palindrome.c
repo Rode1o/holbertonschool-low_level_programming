@@ -11,7 +11,7 @@ int _puts_recursion(char s)
 	return (1 + _puts_recursion(s + 1));
 }
 /**
- * __print_rev_recursion - helper function to verify if a string is palindromic
+ *_print_rev_recursion - helper function to verify if a string is palindromic
  *               or not.
  * @s: the string to be operated upon.
  * @p: the length of the string.
