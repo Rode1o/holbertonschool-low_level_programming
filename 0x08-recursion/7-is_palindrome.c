@@ -6,10 +6,10 @@
  *
  * Return: the length of the string.
  */
-int _strlen(char *s)
+int _puts_recusrion(char *s)
 {
 	if (*s != '\0')
-		return (1 + _strlen(++s));
+		return (1 + _puts_recusrion(s + 1));
 	return (0);
 }
 
@@ -22,12 +22,12 @@ int _strlen(char *s)
  *
  * Return: 1 if palindrome, 0 otherwise.
  */
-int _palindrome(char *s, int len, int stop)
+int _print_rev_recursion(char *s, int p, int q)
 {
-	if (*s != *(s + len))
+	if (*s != *(s + p))
 		return (0);
-	if (len >= stop)
-		return (_palindrome(s + 1, len - 2, stop));
+	if (p >= q)
+		return (_print_rev_recursion(s + 1, p - 2, q));
 	return (1);
 }
 
@@ -39,18 +39,18 @@ int _palindrome(char *s, int len, int stop)
  */
 int is_palindrome(char *s)
 {
-	int len;
-	int stop;
+	int p;
+	int q;
 
-	len = _strlen(s);
+	p = _puts_recursion(s);
 
-	if (len % 2 == 0)
-		stop = (len / 2) - 1;
+	if (p % 2 == 0)
+		q = (p / 2) - 1;
 	else
-		stop = len / 2;
+		q = p / 2;
 
-	if (len == 0)
+	if (p == 0)
 		return (1);
 
-	return (_palindrome(s, len - 1, stop));
+	return (_printv_rev_recursion(s, p - 1, q));
 }
