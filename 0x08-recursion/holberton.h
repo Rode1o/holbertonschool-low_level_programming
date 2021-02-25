@@ -14,7 +14,5 @@ int check(int n, int i);
 int checkp(int i, int lg, char *s);
 int _lenght(char *s);
 int is_palindrome(char *s);
-int _print_rev_recursion(char s);
-int _puts_recursion(char s);
 
 #endif
