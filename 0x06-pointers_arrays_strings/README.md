@@ -1,4 +1,4 @@
-#More pointers, arrays & strings
+# More pointers, arrays & strings
 introduction to data structure
 
 **strcat**  function that concatenates two strings.
