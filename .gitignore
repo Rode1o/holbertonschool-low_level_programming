@@ -113,7 +113,8 @@ flycheck_*.el
 # Icon must end with two \r
 Icon
 *.c~
-
+*.h~
+.gitignore~
 # Thumbnails
 ._*
 
