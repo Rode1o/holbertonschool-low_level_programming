@@ -1,35 +1,27 @@
 #include "holberton.h"
 
 /**
- * _strcmp - main function.
- * @s1: Pointer to fisrt string.
- * @s2: Pointer to second string.
+ * *_strcmp - compares two strings outputing an integer.
  *
- * Description: This function compares two string.
+ * Description: compares two strings, and its output, being an integer,
+ *              shows the difference in ASCII between characters in s1
+ *              and s2. If 0, then both strings are equal. If positive,
+ *              then the character being compared from s1 is greater than s2,
+ *              negative if otherwise.
+ * @s1: the source string.
+ * @s2: the string it will be compared to.
  *
- * Return: The negative, positive  or zero integrer, depends of the
- * condition, and the difference between s1 and s2 when exist.
+ * Return: an integer.
  */
-
 int _strcmp(char *s1, char *s2)
 {
-	while (*s1 && *s2)
-	{
-		if (*s1 != *s2)
-		{
-			return (*s1 - *s2);
-		}
-		s1++;
-		s2++;
-	}
+	int compare, index;
 
-	if (*s1 == *s2)
-	{
-		return (0);
-	}
+	compare = 0;
+	for (index = 0;
+	     (s1[index] != '\0' || s2[index] != '\0') && compare == 0;
+	     ++index)
+		compare = s1[index] - s2[index];
 
-	else
-	{
-		return (*s1 > *s2 ? 1 : -1);
-	}
+	return (compare);
 }

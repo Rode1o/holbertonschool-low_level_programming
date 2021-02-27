@@ -1,30 +1,41 @@
 #include "holberton.h"
 
 /**
- * *_strncpy - main function.
- * @src: The source.
- * @dest: The destination.
- * @n: The number of bytes to copy.
+ * *_strncpy - copies a string, printing NUL characters if the size of
+ *             destination is large enough, or cropping otherwise.
+ * @dest: the destination string.
+ * @src: the source string.
+ * @n: the size of the destination string.
  *
- * Description: This function copies a string.
- *
- * Return: The pointer to destination buffer.
+ * Return: a pointer of the resulting string.
  */
-
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
+	int len_src, counter, null_chars;
 
-	while (i < n && src[i])
+	len_src = counter = null_chars = 0;
+
+	while (src[len_src] != '\0')
+		len_src++;
+
+	if (n >= 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (counter < n)
+		{
+			dest[counter] = src[counter];
+			counter++;
+		}
+		if (n - len_src > 0)
+		{
+			null_chars = n - len_src;
+			counter = 0;
+			while (counter < null_chars)
+			{
+				dest[counter + len_src] = '\0';
+				counter++;
+			}
+		}
 	}
 
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
 	return (dest);
 }

@@ -1,33 +1,25 @@
 #include "holberton.h"
 
 /**
- * *_strcat - main function.
- * @src: The source.
- * @dest: The destination.
+ * *_strcat - concatenates two strings overwriting the NUL character
+ *            from the first string.
+ * @dest: the destination string.
+ * @src: the source string.
  *
- * Description: This function concatenates two strings.
- *
- * Return: The pointer to destination buffer.
+ * Return: a pointer of the resulting string.
  */
-
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int r = 0;
+	int index, len_dest;
 
-	while (dest[i])
-	{
-		i++;
-	}
+	for (index = 0; dest[index] != '\0'; index++)
+		;
+	len_dest = index;
 
-	while (src[r])
-	{
-		dest[i] = src[r];
+	for (index = 0; src[index] != '\0'; index++)
+		dest[len_dest + index] = src[index];
 
-		i++;
-		r++;
-	}
-	dest[i] = '\0';
+	dest[len_dest + index] = '\0';
 
 	return (dest);
 }

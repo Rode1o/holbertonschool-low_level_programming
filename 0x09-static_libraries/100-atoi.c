@@ -1,47 +1,44 @@
 #include "holberton.h"
 
 /**
- * _atoi - main function.
- * @s: Pointer to the string.
+ * _atoi - converts a string to an integer.
+ * @s: string to be converted to integer
  *
- * Description: This function convert a string to an integer.
- *
- * Return: The integer value of string.
+ * Return: the converted integer.
  */
-
 int _atoi(char *s)
 {
-	unsigned int i = 0, z = 0, p = 0;
-	unsigned int h = 1, w = 1, n;
+	unsigned int integer;
+	short flag, neg_sign;
 
-	while (s[i])
+	integer = neg_sign = flag = 0;
+
+	if (*s != '\0')
 	{
-		if (z > 0 && (s[i] < '0' || s[i] > '9'))
+		while (flag < 2)
 		{
-			break;
-		}
-
-		if (s[i] == '-')
-		{
-			h *= -1;
-		}
-
-		if ((s[i] >= '0') && (s[i] <= '9'))
-		{
-			if (z > 0)
+			if (*s >= '0' && *s <= '9')
 			{
-				w *= 10;
+				if (flag == 0)
+					flag = 1;
+				integer = (integer * 10) + *s - '0';
 			}
-			z++;
+			else
+			{
+				if (flag == 1 || *s == '\0')
+					flag = 2;
+				else
+				{
+					if (*s == '-')
+						neg_sign++;
+				}
+			}
+			s++;
 		}
-		i++;
+
+		if (neg_sign % 2 != 0)
+			integer *= -1;
 	}
 
-	for (n = i - z; n < i; n++)
-	{
-		p = p + ((s[n] - 48) * w);
-		w /= 10;
-	}
-
-	return (p * h);
+	return (integer);
 }
