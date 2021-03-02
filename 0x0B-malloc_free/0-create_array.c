@@ -9,13 +9,19 @@
 **/
 char *create_array(unsigned int size, char c)
 {
-	char *ar = (char *)malloc(size);
+	unsigned int i;
+	char *str;
 
-	if (size == 0)
-		return (0);
-	if (size <= 0 || ar == NULL)
+	str = malloc(size * (sizeof(char)));
+
+	if (str == NULL)
 		return (NULL);
-	for (unsigned int token = 0; token < size; token++)
-		ar[token] = c;
-	return (ar);
+	if (size == 0)
+		return (NULL);
+	for (i = 0; i < size; i++)
+	{
+		str[i] = c;
+	}
+	str[i] = '\0';
+	return (str);
 }
