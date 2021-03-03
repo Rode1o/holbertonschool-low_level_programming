@@ -7,13 +7,17 @@
 **/
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0;
+	int i, j;
 	char *concat;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	for (j = 0; s1[j]; j++)
+	{}
+	for (i = 0; s2[i]; i++)
+	{}
 
 	concat = (char *)malloc((j + i + 1) * sizeof(char));
 
