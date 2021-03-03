@@ -10,4 +10,3 @@ Welcome. This is the 0x0B-malloc_free directory where I'm storing exercises show
  - 3-alloc_grid.c: Function that returns a pointer to a matrix of integers.
  - 4-free_grid.c: Function that frees the memory allocated to the previous matrix created.
  - 5-argstostr.c: Function that concatenates all the arguments of a program to a string.
- - 100-strtow.c: Function that splits a string into words null-terminated.
