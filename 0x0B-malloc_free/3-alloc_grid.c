@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
   * alloc_grid - compares two strings
-
   * @width: size of width
   * @height: size of height
   * Return: NULL on malloc failure or if widht or height is 0
