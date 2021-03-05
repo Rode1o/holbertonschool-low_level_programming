@@ -8,20 +8,20 @@
 **/
 int *array_range(int min, int max)
 {
-	int *arr, i, j;
+	int *arr, token1, token2;
 
 	if (min > max)
 		return (NULL);
 
-	j = (max - min) + 1;
+	token2 = (max - min) + 1;
 
-	arr = malloc(j * sizeof(int));
+	arr = malloc(token2 * sizeof(int));
 
 	if (arr == NULL)
 		return (NULL);
 
-	for (i = 0; i < j; i++)
-		arr[i] = min + i;
+	for (token1 = 0; token1 < token2; token1++)
+		arr[token1] = min + token1;
 
 	return (arr);
 }
