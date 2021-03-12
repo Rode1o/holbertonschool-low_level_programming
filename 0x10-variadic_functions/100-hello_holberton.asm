@@ -1,5 +1,5 @@
 section .data                           ;.data starts here
-	msg db 10d,13d,"Hello, Holberton "	;String gets initialized
+	msg db 10d,"Hello, Holberton "	;String gets initialized
 	l equ $-msg			;Length Of String
 section .text				;.text starts here
 	global main			;Moving to _start
@@ -13,4 +13,3 @@ main:					;_start label
 	mov rax,60			;Sys_Exit Function
 	mov rdi,0			;Sucessful Termination
 	syscall			;Call The Kernel
-end:
