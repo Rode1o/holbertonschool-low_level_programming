@@ -1,5 +1,5 @@
 section .data                           ;.data starts here
-	msg db 10d,"Hello, Holberton"	;String gets initialized
+	msg db 10,"Hello, Holberton"	;String gets initialized
 	l equ $-msg			;Length Of String
 section .text				;.text starts here
 	global main			;Moving to _start
