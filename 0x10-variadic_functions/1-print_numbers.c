@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(num, n);
 	while (token < n)
 	{
-		if (i == (n - 1))
+		if (token == (n - 1))
 			printf("%d", va_arg(num, int));
 		else
 			printf("%d%s", va_arg(num, int), separator);
@@ -24,6 +24,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 }
 	printf("\n");
 
-	va_end(sum);
+	va_end(num);
 
 }
