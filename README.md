@@ -21,7 +21,7 @@ Welcome to the Holberton School's Low Level Programming repository where I'll be
 | **[0x0A. C - argc, argv](./0x0A-argc_argv)**                                            | Arguments in a program                                              |
 | **[0x0B. C - malloc, free](./0x0B-malloc_free)**                                        |Automatic and dynamic allocation                                     |
 | **[0x0C. C - More malloc, free](./0x0C-more_malloc_free)**                              |More Automatic and dynamic allocation                                |
-| **[0x0D. C - Preprocessor](./0x0D-preprocessor)**                                       |Macro arguments                                                      |
+| **[0x0D. C - Preprocessor](./0x0D-preprocessor)**                                       |Macro arguments.                                                     |
 | **[0x0E. C - Structures, typedef](./0x0E-structures_typedef)**                          |Struct (C programming language)                                      |
-| **0x0F. C - Function pointers**                           |                                                                     |
-| **0x10. C - Variadic functions**                          |                                                                     |
+| **[0x0F. C - Function pointers](./0x0F-function_pointers)**                             |What are function pointers and how to use them                       |
+| **[0x10. C - Variadic functions](./0x10-variadic_functions)**                           |How to use va_start, va_arg and va_end macros                        |
