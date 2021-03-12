@@ -7,7 +7,7 @@
 **/
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int token;
+	unsigned int token = 0;
 	va_list lstr;
 	char *str;
 
@@ -15,10 +15,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		separator = "";
 	va_start(lstr, n);
 	while (token < n)
-	{	s = va_arg(lstr, char*);
+	{	str = va_arg(lstr, char*);
 	if (str == NULL)
 		str = "(nil)";
-	if (i == (n - 1))
+	if (token == (n - 1))
 		printf("%s", str);
 	else
 		printf("%s%s", str, separator);
