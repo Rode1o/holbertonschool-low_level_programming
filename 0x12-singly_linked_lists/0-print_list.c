@@ -2,7 +2,7 @@
 
 /**
  * print_list - print all the elements of a list
- * @el: list to print the elements of
+ * @h: list to print the elements of
  * Return: Number of nodes
  */
 
