@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <unistd.h>
 
 /**
  * add_node - function to add new node at beginning of list
@@ -8,7 +7,6 @@
  * Return: address of the new element, or NULL upon failure
  */
 
-typedef unsigned int UINT;
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *head_n = NULL;
