@@ -28,5 +28,5 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 			lastnode = lastnode->next;
 		lastnode->next = newnode;
 	}
-	return (newnode)
+	return (newnode);
 }
