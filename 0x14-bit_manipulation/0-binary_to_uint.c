@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- * binary_to_uint - Converts a binary number to an unsigned integer
- * @b: The binary number to be converted.
- *
- * Return: The binary number converted to its decimal representation, or *0 if unsuccessful.
+ * binary_to_uint - function that converts a char binary to int
+ * @b: binary in char
+ * Return: number int; 0 if b is not binary so b is NULL
  */
 unsigned int binary_to_uint(const char *b)
 {
