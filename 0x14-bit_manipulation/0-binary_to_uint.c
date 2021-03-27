@@ -8,28 +8,23 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int number, factor;
-	int counter;
+	unsigned int dec = 0, i = 0, res = 0, len;
 
-	number = counter = factor = 0;
-
-	if (b == NULL || (*b == '0' && *(b + 1) == '\0'))
+	if (b == NULL || b[0] == '\0')
 		return (0);
-
-	while (b[counter] != '\0')
+	/*condition to check if it is binary or not*/
+	for (len = 0; b[len] != '\0'; len++)
 	{
-		if (b[counter] < '0' || b[counter] > '1')
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		counter++;
 	}
-	counter--;
-
-	while (counter >= 0)
+	len = len - 1;
+	/*ehil << (len - i)= mmult 2^2 */
+	while (i <= len)
 	{
-		if (b[counter--] == '1')
-			number += 1 << factor;
-		factor++;
+		dec = (b[i] - '0') << (len - i);
+		res = dec + res;
+		i++;
 	}
-
-	return (number);
+	return (res);
 }
