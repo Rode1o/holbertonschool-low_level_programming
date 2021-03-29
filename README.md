@@ -25,3 +25,7 @@ Welcome to the Holberton School's Low Level Programming repository where I'll be
 | **[0x0E. C - Structures, typedef](./0x0E-structures_typedef)**                          |Struct (C programming language)                                      |
 | **[0x0F. C - Function pointers](./0x0F-function_pointers)**                             |What are function pointers and how to use them                       |
 | **[0x10. C - Variadic functions](./0x10-variadic_functions)**                           |How to use va_start, va_arg and va_end macros                        |
+| **[0x12. C - Singly linked lists](./0x12-singly_linked_lists)**                         | Understanding what are & how use Sinlgy linked lists                |
+| **[0x13. C - More singly linked lists](./0x13-more_singly_linked_lists)**               | More singly linked lists                                            |
+| **[0x14. C - Bit manipulation](./0x14-bit_manipulation)**                               | How to manipulate bits and use bitwise operators                    |
+| **[0x15. C - File I/O](./0x15-file_io)**                                                |Handling files in C Language                                         |
