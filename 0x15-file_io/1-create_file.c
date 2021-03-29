@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 	if (op == EOF)
 		return (-1);
 	/* reading the string */
-	while (!text_content)
+	if (text_content != NULL)
 	{
 		for (; text_content[rc]; rc++)
 			;
