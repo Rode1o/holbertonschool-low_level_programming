@@ -11,7 +11,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int op, we;
+	ssize_t op, we;
 	int rc = 0; 		/* to read the string */
 
 	op = open(filename, O_WRONLY | O_APPEND); /* flag O_APPEND ,ADD TEXT AT THE END OF A FILE */
@@ -19,12 +19,14 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	if (!text_content)  	/* text_content == NULL */
 		return (1);
-	for (;text_content[rc]; rc++)/* Reading the string */
-		;
+	{
+		while (text_content[rc] != '\0' )/* Reading the string */
+			rc++;
 	
-	we = write(op, text_content, rc);
-	if (we == EOF)
-		return (-1);
+		we = write(op, text_content, rc);
+		if (we == EOF)
+			return (-1);
+	}
 
 	close(op);
 	return (1);
