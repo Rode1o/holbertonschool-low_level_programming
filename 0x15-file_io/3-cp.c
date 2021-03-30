@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
 	}
 	file_to = open(argv[2], O_CREAT | O_TRUNC |
 		       O_WRONLY, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	while ((readBuff = read(file_from, buf, BUFFER)) > 0)
-		if (file_to == EOF || readBuff != write(file_to, buf, readBuff))
-		{
+	/*while ((readBuff = read(file_from, buf, BUFFER)) > 0)*/
+	if (file_to == EOF || readBuff != write(file_to, buf, readBuff))
+	{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 				exit(99);
-		}
+	}
 	if (readBuff == EOF)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
