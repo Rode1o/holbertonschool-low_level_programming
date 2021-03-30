@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			exit(98);
 	}
 	file_to = open(argv[2], O_CREAT | O_TRUNC |
-		       O_WRONLY, S_IRUSR | S_IWUSR | S_IWGRP | S_IROTH);
+		       O_WRONLY, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	while ((readBuff = read(file_from, buf, BUFFER)) > 0)
 		if (file_to == EOF || readBuff != write(file_to, buf, readBuff))
 		{
