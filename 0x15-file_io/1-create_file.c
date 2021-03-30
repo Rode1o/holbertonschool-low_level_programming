@@ -22,8 +22,8 @@ int create_file(const char *filename, char *text_content)
 	/* reading the string */
 	if (text_content != NULL)
 	{
-		for (; text_content[rc]; rc++)
-			;
+		while (text_content[rc] != '\0')
+			rc++;
 	}
 
 	we = write(op, text_content, rc);
