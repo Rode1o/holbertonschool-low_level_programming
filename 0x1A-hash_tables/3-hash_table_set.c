@@ -10,9 +10,9 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new = NULL, *list = NULL;
-	unsigned long int index = 0;
+	unsigned long int index, token;
 
-	if (!ht || !key || !value)
+	if (!ht || !key)
 	{
 		return (0);
 	}
@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, ht->size);
 	list = ht->array[index];
 
-	while (list)
+	for (token = 0; list; token++)
 	{
 		if (strcmp(list->key, key) == 0)
 		{
