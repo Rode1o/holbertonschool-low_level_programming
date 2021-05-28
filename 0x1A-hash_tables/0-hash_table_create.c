@@ -8,7 +8,6 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *ht = NULL;
-	unsigned long int token;
 
 	if (size > 0)
 	{
