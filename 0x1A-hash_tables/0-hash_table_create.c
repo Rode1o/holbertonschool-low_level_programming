@@ -1,4 +1,9 @@
 #include "hash_tables.h"
+/**
+ * hash_table_create - Creates a hash table.
+ * @size: Hash table size.
+ * Return: Nodes in list.
+ */
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
@@ -6,14 +11,15 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int token;
 
 	ht = malloc(sizeof(hash_table_t));
-	if(!ht)
+	if (!ht)
 		return (NULL);
 	ht->size = size;
-	ht->array = malloc(sizeof(hash_node_t*) *size);
+	ht->array = malloc(sizeof(hash_node_t *) * size);
 	if (!ht->array)
+		free(ht);
 		return (NULL);
-	for(token = 0; token < size; token++)
+	for (token = 0; token < size; token++)
 		ht->array[token] = NULL;
-	
+
 	return (ht);
 }
