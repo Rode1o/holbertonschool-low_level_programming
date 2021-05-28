@@ -13,13 +13,15 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (size > 0)
 	{
 		ht = malloc(sizeof(hash_table_t));
-		if (!ht)
+		if (ht == NULL)
 			return (NULL);
 		ht->size = size;
 		ht->array = malloc(sizeof(hash_node_t *) * size);
-		if (!ht->array)
+		if (ht->array == NULL)
+		{
 			free(ht);
-		return (NULL);
+			return (NULL);
+		}
 		for (token = 0; token < size; token++)
 			ht->array[token] = NULL;
 
