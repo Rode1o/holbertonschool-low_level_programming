@@ -8,6 +8,8 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *ht = NULL;
+	unsigned long int token;
+	
 
 	if (size > 0)
 	{
@@ -15,13 +17,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 		if (ht == NULL)
 			return (NULL);
 		ht->size = size;
-		ht->array = calloc(size, sizeof(hash_node_t *));
+		ht->array = malloc(sizeof(hash_node_t *) * size);
 		if (ht->array == NULL)
 		{
 			free(ht);
 			return (NULL);
 		}
-		ht->size = size;
+		for (token = 0; token < size; token++)
+			ht->array[token] = NULL;
 		return (ht);
 	}
 	return (NULL);
