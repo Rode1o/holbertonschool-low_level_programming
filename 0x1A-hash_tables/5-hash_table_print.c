@@ -7,7 +7,7 @@
  **/
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *list = NULL;
+	hash_node_t *list;
 	unsigned long token, j = 0;
 
 	if (!ht)
@@ -15,18 +15,22 @@ void hash_table_print(const hash_table_t *ht)
 		return;
 	}
 	printf("{");
-	for (token = 0; token <= (ht->size); token++)
+	for (token = 0; token < (ht->size); token++)
 	{
-		list = ht->array[token];
-		while (list)
+		if (ht->array[token])
 		{
-			if (j)
+			list = ht->array[token];
+			while (list)
 			{
-				printf(", ");
+				if (j == 0)
+				{
+					printf("'%s':'%s'", list->key, list->value);
+					j++;
+				}
+				else
+					printf(", '%s':'%s'", list->key, list->value);
+				list = list->next;
 			}
-			printf("'%s':'%s'", list->key, list->value);
-			j++;
-			list = list->next;
 		}
 	}
 	printf("}\n");
