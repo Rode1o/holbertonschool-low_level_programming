@@ -7,24 +7,24 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ht = NULL;
+	hash_table_t *nht = NULL;
 	
 
 	if (size > 0)
 	{
-		ht = malloc(sizeof(hash_table_t));
-		if (ht == NULL)
+		nht = malloc(sizeof(hash_table_t));
+		if (nht == NULL)
 		{
 			return (NULL);
 		}
-		ht->array = calloc(size,sizeof(hash_node_t *));
-		if (ht->array == NULL)
+		nht->array = calloc(size,sizeof(hash_node_t *));
+		if (nht->array == NULL)
 		{
-			free(ht);
+			free(nht);
 			return (NULL);
 		}
-		ht->size = size;
-		return (ht);
+		nht->size = size;
+		return (nht);
 	}
 	return (NULL);
 }
