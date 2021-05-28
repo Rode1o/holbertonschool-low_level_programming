@@ -22,8 +22,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 			free(ht);
 			return (NULL);
 		}
-		//for (token = 0; token < size; token++)
-		//	ht->array[token] = NULL;
 		ht->size = size;
 		return (ht);
 	}
