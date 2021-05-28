@@ -7,25 +7,36 @@
  * Return: The value associated with the element, or
  * NULL if key couldn’t be found
  **/
+
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *list;
-	unsigned long int index = 0;
+	unsigned long int size, index;
+	hash_node_t *tmp;
 
-	if (!ht || !key)
+	if (ht == NULL)
 	{
 		return (NULL);
 	}
-	index = key_index((const unsigned char *)key, ht->size);
-	list = ht->array[index];
-
-	while (list)
+	size = ht->size;
+	index = key_index((const unsigned char *)key, size);
+	tmp = ht->array[index];
+	if (tmp != NULL)
 	{
-		if (strcmp(list->key, key) == 0)
+		while (strcmp(tmp->key, strdup(key)) != 0 || tmp == NULL)
 		{
-			return (list->value);
+			tmp = tmp->next;
 		}
-		list = list->next;
+		if (tmp == NULL)
+		{
+			return (NULL);
+		}
+		else
+		{
+			return (tmp->value);
+		}
 	}
-	return (NULL);
+	else
+	{
+		return (NULL);
+	}
 }
