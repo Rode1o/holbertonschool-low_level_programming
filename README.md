@@ -29,3 +29,7 @@ Welcome to the Holberton School's Low Level Programming repository where I'll be
 | **[0x13. C - More singly linked lists](./0x13-more_singly_linked_lists)**               | More singly linked lists                                            |
 | **[0x14. C - Bit manipulation](./0x14-bit_manipulation)**                               | How to manipulate bits and use bitwise operators                    |
 | **[0x15. C - File I/O](./0x15-file_io)**                                                |Handling files in C Language                                         |
+| **[0x17. C - Doubly linked lists](./0x17-doubly_linked_lists)**                         | Doubly linked lists                                                 |
+| **[0x18. C - Dynamic libraries](./0x18-dynamic_libraries)**                             | Dynamic libraries                                                   |
+| **[0x1A. C - Hash tables](./0x1A-hash_tables)**                                         | Hash tables                                                         |
+| **[0x1C. C - Makefiles](./0x1C-makefiles)**                                             | Makefiles                                                           |
