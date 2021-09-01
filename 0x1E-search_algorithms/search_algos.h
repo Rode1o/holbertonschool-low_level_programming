@@ -2,7 +2,7 @@
 #define HOLBERTON_H
 
 /**
- * === LIBS ===
+ * LIBS
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,16 +17,16 @@
 */
 typedef struct listint_s
 {
-  int n;
-  size_t index;
-  struct listint_s *next;
-}listint_s;
+int n;
+size_t index;
+struct listint_s *next;
+} listint_s;
 
 /**
- * === PROTOTYPES ===
+ * PROTOTYPES
  */
 int linear_search(int *array, size_t size, int value);
-
+int binary_search(int *array, size_t size, int value);
 
 #endif
 
